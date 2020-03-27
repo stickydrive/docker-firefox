@@ -13,8 +13,9 @@ run	apt-get update
 #run	mkdir /.vnc
 # Setup a password
 #run	x11vnc -storepasswd 1234 ~/.vnc/passwd
-run	mkdir /.app
-run echo "hello world from app!" >| ~/.app/app.sh
-run cat ~/.app/app.sh
+#run	mkdir /.app
+run pwd
+run echo "hello world from app!" >| app.sh
+run cat app.sh
 # Autostart firefox (might not be the best way to do it, but it does the trick)
 #run	bash -c 'echo "firefox" >> /.bashrc'
