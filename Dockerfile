@@ -5,14 +5,14 @@
 
 from	ubuntu:18.04
 # make sure the package repository is up to date
-run	echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+#run	echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 run	apt-get update
 
 # Install vnc, xvfb in order to create a 'fake' display and firefox
-run	apt-get install -y x11vnc xvfb firefox
-run	mkdir /.vnc
+#run	apt-get install -y x11vnc xvfb firefox
+#run	mkdir /.vnc
 # Setup a password
-run	x11vnc -storepasswd 1234 ~/.vnc/passwd
+#run	x11vnc -storepasswd 1234 ~/.vnc/passwd
 run	mkdir /.app
 run echo "hello world from app!" >| ~/.app/app.sh
 run cat ~/.app/app.sh
